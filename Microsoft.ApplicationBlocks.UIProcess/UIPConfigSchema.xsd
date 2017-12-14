@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema elementFormDefault="unqualified" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="uipConfiguration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objectTypes" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="iViewManager" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:anyAttribute />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="state" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence />
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:anyAttribute />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="controller" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:anyAttribute processContents="skip" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="statePersistenceProvider" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:anyAttribute processContents="skip" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:any maxOccurs="unbounded" minOccurs="0" />
+                        </xs:sequence>
+                        <xs:anyAttribute processContents="skip" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="views" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="view" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence></xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required" />
+                                    <xs:attribute name="type" type="xs:string" use="required" />
+                                    <xs:attribute name="controller" type="xs:string" use="required" />
+                                    <xs:attribute name="stayOpen" type="xs:boolean" use="optional" />
+                                    <xs:attribute name="openModal" type="xs:boolean" use="optional" />
+                                    <xs:anyAttribute processContents="skip" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:anyAttribute processContents="skip" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="navigationGraph" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="node" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="navigateTo" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence />
+                                                <xs:attribute name="navigateValue" type="xs:string" use="required" />
+                                                <xs:attribute name="view" type="xs:string" use="required" />
+                                                <xs:anyAttribute />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="view" type="xs:string" use="required" />
+                                    <xs:anyAttribute processContents="skip" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="startView" type="xs:string" use="required" />
+                        <xs:attribute name="state" type="xs:string" use="required" />
+                        <xs:attribute name="statePersist" type="xs:string" use="required" />
+                        <xs:attribute name="iViewManager" type="xs:string" use="required" />
+                        <xs:attribute name="cacheExpirationInterval" type="xs:string" use="optional" />
+                        <xs:attribute name="cacheExpirationMode" type="xs:string" use="optional" />
+                        <xs:anyAttribute />
+                    </xs:complexType>
+                </xs:element>
+                <xs:any minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="enableStateCache" type="xs:boolean" use="optional" />
+            <xs:anyAttribute processContents="skip" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
