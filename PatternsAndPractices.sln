@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConfigurationManagement.KeyConfig", "KeyConfig\ConfigurationManagement.KeyConfig.vbproj", "{7AD2769C-67FD-4DDF-BC8E-38B748D4B735}"
 EndProject
@@ -15,6 +15,11 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces", "Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.vbproj", "{8C07CD93-A2A1-45E3-95DC-BED3F8A7D445}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Microsoft.ApplicationBlocks.UIProcess", "Microsoft.ApplicationBlocks.UIProcess\Microsoft.ApplicationBlocks.UIProcess.vbproj", "{804AC1A5-D3B6-48CD-BF96-A4FFA2B59109}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC4E6DA7-A4BE-4150-B56D-5A3D8FD9BF02}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
