@@ -25,6 +25,7 @@
         </asp:Repeater>
     </table>
 
+    <asp:Label ID="txtMessage" runat="server" Text=""></asp:Label>
 
 
 </asp:Content>

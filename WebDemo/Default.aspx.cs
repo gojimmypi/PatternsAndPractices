@@ -10,7 +10,7 @@ namespace WebDemo
 {
     public partial class _Default : Page
     {
-        const string MY_SERVER = "hadev12";
+        const string MY_SERVER = "localhost";
         const string MY_DATABASE = "master";
 
         //***********************************************************************************************************************************
@@ -36,9 +36,31 @@ namespace WebDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string strSQL = "select * from sys.databases";
-            this.DatabaseList.DataSource = SqlHelper.ExecuteDataset(ConnectionString(MY_SERVER, MY_DATABASE), CommandType.Text, strSQL );
-            this.DatabaseList.DataBind();
+            try
+            {
+                string strSQL = "select * from sys.databases";
+                this.DatabaseList.DataSource = SqlHelper.ExecuteDataset(ConnectionString(MY_SERVER, MY_DATABASE), CommandType.Text, strSQL);
+                this.DatabaseList.DataBind();
+            }
+            catch (Exception ex)
+            {
+                string thisUser = "";
+                try
+                {
+                    thisUser = HttpContext.Current.User.Identity.Name;
+                }
+                catch (Exception exu)
+                {
+                    thisUser = "unknown (" + exu.Message + ")";
+                }
+                this.txtMessage.Text = "Current user: " + thisUser + "<br /> encountered error: " + ex.Message + "<br />";
+
+                if (ex.Message.Contains("Verify that the instance name is correct and that SQL Server is configured to allow remote connections") ) {
+                    this.txtMessage.Text += "<br /><br />Check SQL Server Configuration Manager. SQL Server Network Configuration - Protocols for MSSQLSERVER - TCP/IP - Enabled";
+                }
+
+            } 
+
         }
     }
 }
