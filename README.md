@@ -20,20 +20,22 @@ Also included are the configuration management, exception management, and UI Pro
 
 Favorite SQL operations include:
 
-Execute a SQL command with no results expected:
+#### Execute a SQL command with no results expected:
 
   ```SqlHelper.ExecuteNonQuery(myConnectionString, CommandType.StoredProcedure, strSQL, params)```
 
-Run a SQL command and put the results in a DataSet (or any number of DataTables in a DataSet):
+#### Run a SQL command and put the results in a DataSet (or any number of DataTables in a DataSet):
 
   ```Dim ds As DataSet = SqlHelper.ExecuteDataset(myConnectionString, CommandType.StoredProcedure, strSQL, params)```
 
-Run a SQL command that returns a single integer value
+#### Run a SQL command that returns a single integer value
 
   ```UserCt = CInt(SqlHelper.ExecuteScalar(myConnectionString, CommandType.Text, "SELECT count(*) FROM mytable"))```
 
-Can be compiled as VB.Net, but then used by other languages such as C#
+Can be compiled as VB.Net, but then used by other languages such as C# (see included C# WebDemo app)
 
+
+Code was was freeware from Microsoft, but apparently no longer supported / available.
 
 '==============================================================================='
  Microsoft Configuration Management Application Block for .NET
