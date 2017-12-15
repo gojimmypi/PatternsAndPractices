@@ -16,7 +16,7 @@ Also included are the configuration management, exception management, and UI Pro
 
 Favorite SQL operations include:
 
-EWxecute a SQL command with no results expected:
+Execute a SQL command with no results expected:
 
   ```SqlHelper.ExecuteNonQuery(myConnectionString, CommandType.StoredProcedure, strSQL, params)```
 
