@@ -1,10 +1,14 @@
-# PatternsAndPractices
+# PatternsAndPractices Class Libraries:
 
-KeyConfig\ConfigurationManagement
-Microsoft.ApplicationBlocks.ConfigurationManagement
-Microsoft.ApplicationBlocks.Data
-Microsoft.ApplicationBlocks.ExceptionManagement
-Microsoft.ApplicationBlocks.UIProcess
+### KeyConfig\ConfigurationManagement
+
+### Microsoft.ApplicationBlocks.ConfigurationManagement
+
+### Microsoft.ApplicationBlocks.Data
+
+### Microsoft.ApplicationBlocks.ExceptionManagement
+
+### Microsoft.ApplicationBlocks.UIProcess
 
 
 
