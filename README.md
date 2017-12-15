@@ -28,7 +28,7 @@ Run a SQL command that returns a single integer value
 Can be compiled as VB.Net, but then used by other languages such as C#
 
 
-===============================================================================
+'==============================================================================='
  Microsoft Configuration Management Application Block for .NET
  http://msdn.microsoft.com/library/en-us/dnbda/html/cmab.asp
 
@@ -38,16 +38,16 @@ Can be compiled as VB.Net, but then used by other languages such as C#
 
  For more information see the Configuration Management Application Block Implementation Overview. 
  
-===============================================================================
+'==============================================================================='
  Copyright (C) 2000-2001 Microsoft Corporation
  All rights reserved.
  THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
  OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
  LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
  FITNESS FOR A PARTICULAR PURPOSE.
-==============================================================================
+'=============================================================================='
 
-===============================================================================
+'==============================================================================='
  Microsoft User Interface Process Application Block for .NET
  http://msdn.microsoft.com/library/en-us/dnbda/html/uip.asp
 
@@ -55,11 +55,11 @@ Can be compiled as VB.Net, but then used by other languages such as C#
 
  For more information see the User Interface Process Application Block Implementation Overview. 
  
-===============================================================================
+'==============================================================================='
  Copyright (C) 2000-2001 Microsoft Corporation
  All rights reserved.
  THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
  OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
  LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
  FITNESS FOR A PARTICULAR PURPOSE.
-==============================================================================
+'=============================================================================='
